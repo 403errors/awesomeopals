@@ -3,7 +3,7 @@
 > **Discover Powerful AI Mini-Apps.**
 > The unofficial community hub for Google Opal.
 
-![Awesome Opals Banner](https://via.placeholder.com/1200x400/05050a/00f2ff?text=Awesome+Opals)
+![Awesome Opals Banner](public/awesomeopals.png)
 
 ## What is Google Opal?
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Opals - Coming Soon</title>
+    <meta name="description" content="Discover the future of modular apps with Awesome Opals. A community-driven ecosystem of features. Coming soon.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <header>
+        <nav class="glass-panel">
+            <div class="logo">Opals</div>
+            <a href="https://github.com/awesomeopals" class="github-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">Coming Soon</div>
+                <h1>Unlock Infinite <span class="gradient-text">Possibilities</span></h1>
+                <p class="subtitle">The modular app platform where every feature is an Opal. Build, share, and customize your experience.</p>
+                
+                <form class="signup-form" onsubmit="event.preventDefault();">
+                    <input type="email" placeholder="Enter your email for early access" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>What can you do with Opals?</h2>
+            <div class="grid">
+                <div class="card glass-panel">
+                    <div class="icon">🚀</div>
+                    <h3>Productivity Opal</h3>
+                    <p>Focus timers, task managers, and workflow automations that plug right into your daily driver.</p>
+                </div>
+                <div class="card glass-panel">
+                    <div class="icon">💬</div>
+                    <h3>Social Opal</h3>
+                    <p>Connect with friends, share your setup, and discover new ways to interact within the ecosystem.</p>
+                </div>
+                <div class="card glass-panel">
+                    <div class="icon">⚡️</div>
+                    <h3>Dev Opal</h3>
+                    <p>Debug tools, API inspectors, and live code editors. Built by developers, for developers.</p>
+                </div>
+                <div class="card glass-panel">
+                    <div class="icon">🎨</div>
+                    <h3>Creative Opal</h3>
+                    <p>Design tools, color pickers, and asset managers to streamline your creative process.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="glass-panel cta-content">
+                <h2>Build the Future</h2>
+                <p>Are you a developer? Start building your own Opals today and join the revolution.</p>
+                <a href="https://github.com/awesomeopals" class="button-primary">Contribute on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Awesome Opals. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple interaction for the form
+        document.querySelector('.signup-form').addEventListener('submit', (e) => {
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Joined!';
+            btn.style.background = 'var(--gradient-primary)';
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = '';
+                e.target.reset();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

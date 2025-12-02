@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Opals - Coming Soon</title>
-    <meta name="description" content="Discover the future of modular apps with Awesome Opals. A community-driven ecosystem of features. Coming soon.">
+    <title>Awesome Opals - AI Mini-App Community</title>
+    <meta name="description"
+        content="The community hub for Google Opal. Discover, remix, and share powerful AI workflows and mini-apps.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="background-glow"></div>
-    
+
     <header>
         <nav class="glass-panel">
-            <div class="logo">Opals</div>
-            <a href="https://github.com/awesomeopals" class="github-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <div class="logo">Awesome Opals</div>
+            <a href="https://github.com/awesomeopals" class="github-link" target="_blank"
+                rel="noopener noreferrer">GitHub</a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="badge">Coming Soon</div>
-                <h1>Unlock Infinite <span class="gradient-text">Possibilities</span></h1>
-                <p class="subtitle">The modular app platform where every feature is an Opal. Build, share, and customize your experience.</p>
-                
-                <form class="signup-form" onsubmit="event.preventDefault();">
-                    <input type="email" placeholder="Enter your email for early access" required>
+                <div class="badge">Community Hub</div>
+                <h1>Discover Powerful <span class="gradient-text">AI Mini-Apps</span></h1>
+                <p class="subtitle">The unofficial community for Google Opal. Explore, remix, and share multi-agent
+                    flows built with Gemini.</p>
+
+                <form class="signup-form" action="https://formspree.io/f/mqarblad" method="POST">
+                    <input type="email" name="email" placeholder="Join waitlist" required>
                     <button type="submit">Notify Me</button>
                 </form>
             </div>
         </section>
 
         <section class="features">
-            <h2>What can you do with Opals?</h2>
+            <h2>What can you build with Opal?</h2>
             <div class="grid">
                 <div class="card glass-panel">
-                    <div class="icon">🚀</div>
-                    <h3>Productivity Opal</h3>
-                    <p>Focus timers, task managers, and workflow automations that plug right into your daily driver.</p>
+                    <div class="icon">✈️</div>
+                    <h3>Travel Agent</h3>
+                    <p>Plan your dream vacation with live flight data, hotel recommendations, and itinerary generation.
+                    </p>
                 </div>
                 <div class="card glass-panel">
-                    <div class="icon">💬</div>
-                    <h3>Social Opal</h3>
-                    <p>Connect with friends, share your setup, and discover new ways to interact within the ecosystem.</p>
+                    <div class="icon">🎓</div>
+                    <h3>Study Buddy</h3>
+                    <p>Turn any YouTube video into an interactive quiz or summary to master new topics instantly.</p>
                 </div>
                 <div class="card glass-panel">
-                    <div class="icon">⚡️</div>
-                    <h3>Dev Opal</h3>
-                    <p>Debug tools, API inspectors, and live code editors. Built by developers, for developers.</p>
+                    <div class="icon">💻</div>
+                    <h3>Coder</h3>
+                    <p>Generate boilerplate code, debug errors, and refactor complex functions with a specialized agent
+                        flow.</p>
                 </div>
                 <div class="card glass-panel">
-                    <div class="icon">🎨</div>
-                    <h3>Creative Opal</h3>
-                    <p>Design tools, color pickers, and asset managers to streamline your creative process.</p>
+                    <div class="icon">👗</div>
+                    <h3>Stylist</h3>
+                    <p>Get personalized fashion advice and outfit recommendations based on the occasion and your style.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="cta">
             <div class="glass-panel cta-content">
-                <h2>Build the Future</h2>
-                <p>Are you a developer? Start building your own Opals today and join the revolution.</p>
-                <a href="https://github.com/awesomeopals" class="button-primary">Contribute on GitHub</a>
+                <h2>Create Your Own Opal</h2>
+                <p>Use Google's no-code builder to turn your ideas into reality. No coding required.</p>
+                <a href="https://opal.google" class="button-primary" target="_blank">Start Building</a>
             </div>
         </section>
     </main>
@@ -74,18 +82,56 @@
     </footer>
 
     <script>
-        // Simple interaction for the form
-        document.querySelector('.signup-form').addEventListener('submit', (e) => {
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Joined!';
-            btn.style.background = 'var(--gradient-primary)';
+        const form = document.querySelector('.signup-form');
+        const btn = form.querySelector('button');
+        const originalText = btn.innerText;
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Disable button and show loading state
+            btn.disabled = true;
+            btn.innerText = 'Joining...';
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('https://formspree.io/f/mqarblad', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success state
+                    btn.innerText = 'Joined!';
+                    btn.style.background = 'var(--gradient-primary)';
+                    form.reset();
+                } else {
+                    // Error state
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        btn.innerText = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        btn.innerText = 'Oops! Try again.';
+                    }
+                    btn.style.background = 'red';
+                }
+            } catch (error) {
+                btn.innerText = 'Error. Try again.';
+                btn.style.background = 'red';
+            }
+
+            // Reset button after delay
             setTimeout(() => {
                 btn.innerText = originalText;
                 btn.style.background = '';
-                e.target.reset();
+                btn.disabled = false;
             }, 3000);
         });
     </script>
 </body>
+
 </html>

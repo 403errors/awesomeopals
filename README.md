@@ -1,43 +1,56 @@
 # Awesome Opals 💎
 
-> **Unlock Infinite Possibilities.**
-> The modular app platform where every feature is an Opal.
+> **Discover Powerful AI Mini-Apps.**
+> The unofficial community hub for Google Opal.
 
 ![Awesome Opals Banner](https://via.placeholder.com/1200x400/05050a/00f2ff?text=Awesome+Opals)
 
-## What is Awesome Opals?
+## What is Google Opal?
 
-Awesome Opals is a revolutionary modular application platform designed to give you complete control over your digital experience. Instead of a bloated app with features you don't use, Opals lets you build your perfect workspace piece by piece.
+[Google Opal](https://opal.google) is a no-code platform that lets you build powerful AI mini-apps and multi-agent workflows. You can connect prompts, tools, and models (like Gemini) to create custom assistants for any task—without writing a single line of code.
 
-Each feature is an **Opal**—a lightweight, powerful plugin that integrates seamlessly into the core platform.
+**Awesome Opals** is a curated collection of the best Opals created by the community.
 
-## Why Opals?
+## Developer Guide: How to Create an Opal
 
-- **Modular**: Install only what you need.
-- **Community Driven**: Built by developers, for everyone.
-- **Beautiful**: A premium, cohesive design system.
+Creating an Opal is free and easy. You have three main ways to get started:
 
-## Contributing Opals
+### 1. Natural Language Creation (Easiest)
+Just describe what you want!
+1.  Go to [opal.google](https://opal.google).
+2.  In the prompt box, type your idea (e.g., "Create an app that quizzes me on YouTube videos").
+3.  Opal will generate the workflow for you.
 
-We believe the best features come from the community. We encourage developers to build and share their own Opals!
+### 2. Remix from Gallery
+Don't start from scratch.
+1.  Browse the **Gallery** on the Opal homepage.
+2.  Click on an Opal you like.
+3.  Click **Remix** to create your own editable copy.
+4.  Tweak the prompts or add new steps.
 
-### How to Add an Opal
+### 3. Visual Editor (Advanced)
+For maximum control.
+1.  Click **Create New**.
+2.  Use the canvas to drag and drop blocks:
+    -   **Input**: Get text or files from the user.
+    -   **Generate**: Call an AI model (Gemini).
+    -   **Tools**: Search the web, read files, etc.
+    -   **Output**: Display results or save to Google Drive.
+3.  Connect the blocks to define the flow.
 
-1.  **Fork this repository.**
-2.  **Create your Opal**: Follow our [Developer Guide](COMING_SOON.md) to build your plugin.
-3.  **Submit a Pull Request**: Add your Opal to the directory.
+## How to Contribute
 
-### Ideas for Opals
+Have you built an amazing Opal? Share it with the world!
 
--   **Productivity**: Kanban boards, Pomodoro timers, Note-taking.
--   **Social**: Chat widgets, Activity feeds.
--   **Dev Tools**: JSON formatters, API testers.
--   **Lifestyle**: Habit trackers, Meditation guides.
+1.  **Publish your Opal**: In the Opal editor, click "Share" to get a public link.
+2.  **Fork this repository**.
+3.  **Add your Opal**: Add a link to your Opal in the `OPALS.md` file (create it if it doesn't exist) or submit a PR to update the website.
+4.  **Submit a Pull Request**.
 
-## Coming Soon
+## Community
 
-We are currently in the early stages of development. Sign up on our [website](https://awesomeopals.com) to get notified when we launch!
+Join the discussion and request new Opals on our [Discussions](https://github.com/awesomeopals/discussions) page.
 
 ---
 
-Built with ❤️ by the Awesome Opals Team.
+*Disclaimer: This project is a community initiative and is not officially affiliated with Google.*
